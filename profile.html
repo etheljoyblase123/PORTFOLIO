@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethel Joy Blase | Profile</title>
+  <style>
+    body { font-family: Arial; margin:0; padding:0; background:#fff; text-align:center; }
+    nav { background:#6C63FF; padding:12px; }
+    nav a { color:white; margin:0 10px; text-decoration:none; font-weight:bold; }
+    h2 { color:#6C63FF; margin:20px 0; }
+
+    .profile-pic { margin-top:20px; }
+    .profile-pic img { width:150px; height:150px; border-radius:50%; object-fit:cover; border:4px solid #6C63FF; }
+
+    p { max-width:650px; margin:15px auto; color:#444; line-height:1.6; }
+
+    /* Projects */
+    .projects { max-width:900px; margin:40px auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; }
+    .project-card { background:#f9f9ff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); padding:15px; transition:transform 0.2s; }
+    .project-card:hover { transform:translateY(-5px); }
+    .project-card img { width:100%; height:150px; object-fit:cover; border-radius:10px; }
+    .project-card h3 { color:#6C63FF; margin:10px 0; }
+    .project-card p { color:#555; font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('profile') }}">Profile</a>
+  </nav>
+
+  <div class="profile-pic">
+    <img src="{{ url_for('static', filename='img/profile1.jpg') }}" alt="Profile Picture">
+  </div>
+
+  <h2>My Projects</h2>
+  <p>Hello! I'm <b>Ethel Joy Blase</b>.  
+     This page is a showcase of some unique projects I’ve designed.  
+     Each project reflects my creativity, problem-solving, and passion for technology.</p>
+
+  <div class="projects">
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='img/project1.jpg') }}" alt="Project 1">
+      <h3>🎨 Color Palette Generator</h3>
+      <p>A creative tool that generates unique color palettes for designers and artists.</p>
+    </div>
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='img/project2.jpg') }}" alt="Project 2">
+      <h3>📅 Daily Planner App</h3>
+      <p>A planner that organizes tasks, sets priorities, and reminds users of deadlines.</p>
+    </div>
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='img/project3.jpg') }}" alt="Project 3">
+      <h3>🌦 Mini Weather Dashboard</h3>
+      <p>A simple dashboard that shows local weather conditions and weekly forecasts.</p>
+    </div>
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='img/project4.jpg') }}" alt="Project 4">
+      <h3>💡 Idea Journal</h3>
+      <p>An app to write, save, and organize creative ideas and notes quickly.</p>
+    </div>
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='img/project5.jpg') }}" alt="Project 5">
+      <h3>📊 Fitness Progress Tracker</h3>
+      <p>A fitness tracker that logs workouts, measures progress, and motivates users.</p>
+    </div>
+  </div>
+</body>
+</html>
